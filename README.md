@@ -44,5 +44,6 @@ https://pixabay.com/p-40016/?no_redirect
 This icon is authorized by pixabay for free and business usage, modification and share.For detailed information, please see the following link.https://pixabay.com/p-1294844/?no_redirect
  
 
-## 連絡先
-Mail: lo.pro.4.civic@gmail.com
+# 連絡方法
+
+githubのIssue機能等をお使いください
