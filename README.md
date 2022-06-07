@@ -10,39 +10,14 @@
 今後は、公園以外の防災施設に関しても同様の施設情報の掲載を行こなったり、スマホアプリとしての開発を行ったりすることを考えている。
 
 ## 使用データ
-この「LoPro 地産地消マップ」は以下の著作物を改変して利用しています。 「うつのみや地産地消推進店」、宇都宮市、クリエイティブ・コモンズ・ライセンス表示2.1 http://creativecommons.org/licenses/by/2.1/jp/
+この「**まもるくん**」は以下の著作物を改変して利用しています。 「指定緊急避難場所一覧（推奨データセット準拠）」、宇都宮市、クリエイティブ・コモンズ・ライセンス表示2.1 http://creativecommons.org/licenses/by/2.1/jp/
 
-* 農産物直売所（地産地消推進店）
-* 量販店・小売店（地産地消推進店）
-* 飲食店・宿泊施設（地産地消推進店）
-* 食品加工事業所（地産地消推進店）
-
+* 広域避難所(公園のみ)
+* 一次避難所(公園のみ)
 
 ## 使用ライブラリ
 * Map: Leaflet, MapBox
 * UI: Bootstrap
-
-## Icon
-
-各アイコンは著作権フリーのものを使用しております。
-* 飲食店  
-This icon is authorized by the author for free usage, modification and publication.
-See the following link for detail.
-https://commons.wikimedia.org/wiki/File:Aiga_restaurant_knife-fork_crossed.png
-
-* 農産物直売所  
-This icon is authorized by pixabay for free and business usage, modification and share.
-For detailed information, please see the following link.
-https://pixabay.com/p-160442/?no_redirect
-
-* スーパー  
-This icon is authorized by pixabay for free and business usage, modification and share.
-For detailed information, please see the following link.
-https://pixabay.com/p-40016/?no_redirect
-
-* 食品加工工場  
-This icon is authorized by pixabay for free and business usage, modification and share.For detailed information, please see the following link.https://pixabay.com/p-1294844/?no_redirect
- 
 
 # 連絡方法
 
