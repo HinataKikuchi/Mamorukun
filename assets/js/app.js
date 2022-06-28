@@ -95,7 +95,7 @@ function syncSidebar() {
   theaters.eachLayer(function (layer) {
     if (map.hasLayer(theaterLayer)) {
       if (map.getBounds().contains(layer.getLatLng())) {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="icon/insyoukuten.png"></td><td class="feature-name">' + layer.feature.properties.title + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="icon/tmporaly_evacuation_site.png"></td><td class="feature-name">' + layer.feature.properties.title + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
   });
@@ -103,7 +103,7 @@ function syncSidebar() {
   museums.eachLayer(function (layer) {
     if (map.hasLayer(museumLayer)) {
       if (map.getBounds().contains(layer.getLatLng())) {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="icon/ryohanten.png"></td><td class="feature-name">' + layer.feature.properties.title + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="icon/wide_area_evacuation_site.png"></td><td class="feature-name">' + layer.feature.properties.title + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
   });
@@ -232,12 +232,13 @@ var markerClusters = new L.MarkerClusterGroup({
 });
 
 /* Empty layer placeholder to add to layer control for listening when to add/remove theaters to markerClusters layer */
+// 一時避難所用レイヤー
 var theaterLayer = L.geoJson(null);
 var theaters = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "icon/insyoukuten.png",
+        iconUrl: "icon/temporary_evacuation_site.png",
         iconSize: [24, 28],
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
@@ -270,18 +271,20 @@ var theaters = L.geoJson(null, {
   }
 });
 //geojson 読み込み
-$.getJSON("data/foodshop.geojson", function (data) {
+//一時避難場所のgeojson読み込み
+$.getJSON("data/tmp_park.geojson", function (data) {
   theaters.addData(data);
   map.addLayer(theaterLayer);
 });
 
+//広域避難場所用レイヤー
 /* Empty layer placeholder to add to layer control for listening when to add/remove museums to markerClusters layer */
 var museumLayer = L.geoJson(null);
 var museums = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "icon/ryohanten.png",
+        iconUrl: "icon/wide_area_evacuation_site.pngs",
         iconSize: [24, 28],
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
@@ -313,7 +316,8 @@ var museums = L.geoJson(null, {
     }
   }
 });
-$.getJSON("data/hypermarket.geojson", function (data) {
+//広域避難場所のgeojson読み込み
+$.getJSON("data/wide_park.geojson", function (data) {
   museums.addData(data);
   map.addLayer(museumLayer);
 });
@@ -531,10 +535,10 @@ var baseLayers = {
 
 var groupedOverlays = {
   "カテゴリー": {
-    "<img src='icon/insyoukuten.png' width='24' height='28'>&nbsp;飲食店": theaterLayer,
-    "<img src='icon/ryohanten.png' width='24' height='28'>&nbsp;スーパー": museumLayer,
-    "<img src='icon/nosanbutsu.png' width='24' height='28'>&nbsp;農産物直売所": nosanbutsuLayer,
-    "<img src='icon/curedproduct.png' width='24' height='28'>&nbsp;食品加工工場": syokuhinkakouLayer
+    "<img src='icon/tmporaly_evacuation_site.png' width='24' height='28'>&nbsp;飲食店": theaterLayer,
+    "<img src='icon/wide_area_evacuation_site.png' width='24' height='28'>&nbsp;スーパー": museumLayer,
+    // "<img src='icon/nosanbutsu.png' width='24' height='28'>&nbsp;農産物直売所": nosanbutsuLayer,
+    // "<img src='icon/curedproduct.png' width='24' height='28'>&nbsp;食品加工工場": syokuhinkakouLayer
   },
   // "Reference": {
   //   "Boroughs": boroughs,
@@ -673,7 +677,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: theatersBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='icon/insyokuten.png' width='24' height='28'>&nbsp;Theaters</h4>",
+      header: "<h4 class='typeahead-header'><img src='icon/tmporaly_evacuation_site.png' width='24' height='28'>&nbsp;Theaters</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, {
@@ -681,7 +685,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: museumsBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='icon/ryohanten.png' width='24' height='28'>&nbsp;Museums</h4>",
+      header: "<h4 class='typeahead-header'><img src='icon/wide_area_evacuation_site.png' width='24' height='28'>&nbsp;Museums</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   },{
