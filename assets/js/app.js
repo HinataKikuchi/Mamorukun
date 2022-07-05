@@ -284,7 +284,7 @@ var museums = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "icon/wide_area_evacuation_site.pngs",
+        iconUrl: "icon/wide_area_evacuation_site.png",
         iconSize: [24, 28],
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
