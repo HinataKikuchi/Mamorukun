@@ -14,10 +14,25 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
   }
 ).addTo(map);
 
-var url = 'data/geojson_data/tmp_park.geojson';
-fetch(url)
+
+//一時避難所のデータ
+var tmpEvacuationParkUrl = './data/geojson_data/tmp_park.geojson';
+fetch(tmpEvacuationParkUrl)
   .then(response => response.json())
   // GeoJSONを地図に追加する
   .then(data => {
     L.geoJSON(data).addTo(map);
+    console.log('Could get tmp json');
+    console.log(data);
   });
+
+var wideEvacuationParkUrl = './data/geojson_data/wide_park.geojson';
+fetch(tmpEvacuationParkUrl)
+  .then(response => response.json())
+  // GeoJSONを地図に追加する
+  .then(data => {
+    L.geoJSON(data).addTo(map);
+    console.log('Could get wide json');
+    console.log(data);
+  });
+
