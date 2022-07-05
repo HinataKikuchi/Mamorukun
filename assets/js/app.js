@@ -535,8 +535,8 @@ var baseLayers = {
 
 var groupedOverlays = {
   "カテゴリー": {
-    "<img src='icon/tmporaly_evacuation_site.png' width='24' height='28'>&nbsp;飲食店": theaterLayer,
-    "<img src='icon/wide_area_evacuation_site.png' width='24' height='28'>&nbsp;スーパー": museumLayer,
+    "<img src='icon/tmporaly_evacuation_site.png' width='24' height='28'>&nbsp;一時避難場所(公園)": theaterLayer,
+    "<img src='icon/wide_area_evacuation_site.png' width='24' height='28'>&nbsp;広域避難場所(公園)": museumLayer,
     // "<img src='icon/nosanbutsu.png' width='24' height='28'>&nbsp;農産物直売所": nosanbutsuLayer,
     // "<img src='icon/curedproduct.png' width='24' height='28'>&nbsp;食品加工工場": syokuhinkakouLayer
   },
