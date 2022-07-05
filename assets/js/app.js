@@ -125,9 +125,9 @@ function syncSidebar() {
   featureList = new List("features", {
     valueNames: ["feature-name"]
   });
-  featureList.sort("feature-name", {
-    order: "asc"
-  });
+  // featureList.sort("feature-name", {
+  //   order: "asc"
+  // });
 }
 
 /* Basemap Layers */
