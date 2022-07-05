@@ -14,25 +14,31 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
   }
 ).addTo(map);
 
+// leafletに追加するリストを定義
+let parkLocationList = [];
 
 //一時避難所のデータ
 var tmpEvacuationParkUrl = './data/geojson_data/tmp_park.geojson';
+// jquery を使わずにデータ処理したい
 fetch(tmpEvacuationParkUrl)
   .then(response => response.json())
   // GeoJSONを地図に追加する
   .then(data => {
-    L.geoJSON(data).addTo(map);
+    parkLocationList[parkLocationList.length] = L.geoJSON(data);
     console.log('Could get tmp json');
-    console.log(data);
   });
 
+//広域避難所のデータ
 var wideEvacuationParkUrl = './data/geojson_data/wide_park.geojson';
 fetch(tmpEvacuationParkUrl)
   .then(response => response.json())
   // GeoJSONを地図に追加する
   .then(data => {
-    L.geoJSON(data).addTo(map);
+    parkLocationList[parkLocationList.length] = L.geoJSON(data);
     console.log('Could get wide json');
-    console.log(data);
   });
 
+
+let group = L.layerGroup(parkLocationList);
+group.addTo(map);
+// L.geoJSON(data).addTo(map);
