@@ -1,10 +1,10 @@
 {
 "type": "FeatureCollection",
 "features": [
-{ "type": "Feature", "properties": { "title": "ブレックスアリーナ宇都宮〔市体育館〕・駅東公園（広域避難場所）", "city": "元今泉5丁目6-18　他", "Tel": "028-663-1611（スポーツ振興財団）", "coordinates": "139.9127068:36.5581267", "longtitude": "139.9127068", "latitude": "36.5581267" }, "geometry": { "type": "Point", "coordinates": [ 139.9127068, 36.5581267 ] } },
-{ "type": "Feature", "properties": { "title": "八幡山公園（広域避難場所）", "city": "塙田５丁目2-70", "Tel": "028-632-2529（市公園管理課）", "coordinates": "139.8899724:36.5676559", "longtitude": "139.8899724", "latitude": "36.5676559" }, "geometry": { "type": "Point", "coordinates": [ 139.8899724, 36.5676559 ] } },
-{ "type": "Feature", "properties": { "title": "平出工業団地公園（広域避難場所）", "city": "平出工業団地30-1", "Tel": "028-662-5813（緑の相談所）", "coordinates": "139.9389889:36.5677532", "longtitude": "139.9389889", "latitude": "36.5677532" }, "geometry": { "type": "Point", "coordinates": [ 139.9389889, 36.5677532 ] } },
-{ "type": "Feature", "properties": { "title": "宮原運動公園（広域避難場所）", "city": "陽南４丁目5-6", "Tel": "028-658-1052", "coordinates": "139.8717313:36.5350165", "longtitude": "139.8717313", "latitude": "36.5350165" }, "geometry": { "type": "Point", "coordinates": [ 139.8717313, 36.5350165 ] } },
-{ "type": "Feature", "properties": { "title": "栃木県中央公園（広域避難場所）", "city": "睦町2-50", "Tel": "028-636-1491（公園管理事務所）", "coordinates": "139.8663676:36.5553989", "longtitude": "139.8663676", "latitude": "36.5553989" }, "geometry": { "type": "Point", "coordinates": [ 139.8663676, 36.5553989 ] } }
+{ "type": "Feature", "properties": { "title": "ブレックスアリーナ宇都宮〔市体育館〕・駅東公園（広域避難場所）", "city": "元今泉5丁目6-18　他", "Tel": "028-663-1611（スポーツ振興財団）", "coordinates": "139.9092542:36.5605916", "longtitude": "139.9092542", "latitude": "36.5605916" }, "geometry": { "type": "Point", "coordinates": [ 139.9092542, 36.5605916 ] } },
+{ "type": "Feature", "properties": { "title": "八幡山公園（広域避難場所）", "city": "塙田５丁目2-70", "Tel": "028-632-2529（市公園管理課）", "coordinates": "139.8860899:36.5710841", "longtitude": "139.8860899", "latitude": "36.5710841" }, "geometry": { "type": "Point", "coordinates": [ 139.8860899, 36.5710841 ] } },
+{ "type": "Feature", "properties": { "title": "平出工業団地公園（広域避難場所）", "city": "平出工業団地30-1", "Tel": "028-662-5813（緑の相談所）", "coordinates": "139.9357288:36.5703225", "longtitude": "139.9357288", "latitude": "36.5703225" }, "geometry": { "type": "Point", "coordinates": [ 139.9357288, 36.5703225 ] } },
+{ "type": "Feature", "properties": { "title": "宮原運動公園（広域避難場所）", "city": "陽南４丁目5-6", "Tel": "028-658-1052", "coordinates": "139.8684861:36.5381157", "longtitude": "139.8684861", "latitude": "36.5381157" }, "geometry": { "type": "Point", "coordinates": [ 139.868486100000013, 36.5381157 ] } },
+{ "type": "Feature", "properties": { "title": "栃木県中央公園（広域避難場所）", "city": "睦町2-50", "Tel": "028-636-1491（公園管理事務所）", "coordinates": "139.8627259:36.5585350", "longtitude": "139.8627259", "latitude": "36.5585350" }, "geometry": { "type": "Point", "coordinates": [ 139.862725899999987, 36.558535 ] } }
 ]
 }

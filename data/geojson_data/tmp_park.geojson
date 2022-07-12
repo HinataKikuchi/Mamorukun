@@ -1,10 +1,10 @@
 {
 "type": "FeatureCollection",
 "features": [
-{ "type": "Feature", "properties": { "title": "錦中央公園（一時避難場所）", "city": "今泉町157", "Tel": "028-663-1611（スポーツ振興財団）", "coordinates": "139.9024669:36.5657864", "longtitude": "139.9024669", "latitude": "36.5657864" }, "geometry": { "type": "Point", "coordinates": [ 139.9024669, 36.5657864 ] } },
-{ "type": "Feature", "properties": { "title": "御幸公園（一時避難場所）", "city": "平出工業団地13-1", "Tel": "028-663-1611（スポーツ振興財団）", "coordinates": "139.9337652:36.5803203", "longtitude": "139.9337652", "latitude": "36.5803203" }, "geometry": { "type": "Point", "coordinates": [ 139.933765200000011, 36.5803203 ] } },
-{ "type": "Feature", "properties": { "title": "文化会館及び明保野公園（一時避難場所）", "city": "明保野町7-66 外", "Tel": "028-636-2121（文化会館）", "coordinates": "139.8713327:36.5436572", "longtitude": "139.8713327", "latitude": "36.5436572" }, "geometry": { "type": "Point", "coordinates": [ 139.871332700000011, 36.5436572 ] } },
-{ "type": "Feature", "properties": { "title": "陽南第1公園（一時避難場所）", "city": "大塚町1", "Tel": "028-663-1611（スポーツ振興財団）", "coordinates": "139.8656817:36.5321054", "longtitude": "139.8656817", "latitude": "36.5321054" }, "geometry": { "type": "Point", "coordinates": [ 139.86568170000001, 36.5321054 ] } },
-{ "type": "Feature", "properties": { "title": "宇都宮城址公園（一時避難場所）", "city": "本丸町、旭1丁目地内（市役所東側）", "Tel": "028-632-2529（市公園管理課）", "coordinates": "139.8886906:36.5513311", "longtitude": "139.8886906", "latitude": "36.5513311" }, "geometry": { "type": "Point", "coordinates": [ 139.8886906, 36.5513311 ] } }
+{ "type": "Feature", "properties": { "title": "錦中央公園（一時避難場所）", "city": "今泉町157", "Tel": "028-663-1611（スポーツ振興財団）", "coordinates": "139.8992283:36.5686830", "longtitude": "139.8992283", "latitude": "36.5686830" }, "geometry": { "type": "Point", "coordinates": [ 139.8992283, 36.568683 ] } },
+{ "type": "Feature", "properties": { "title": "御幸公園（一時避難場所）", "city": "平出工業団地13-1", "Tel": "028-663-1611（スポーツ振興財団）", "coordinates": "139.9306029:36.5836147", "longtitude": "139.9306029", "latitude": "36.5836147" }, "geometry": { "type": "Point", "coordinates": [ 139.9306029, 36.5836147 ] } },
+{ "type": "Feature", "properties": { "title": "文化会館及び明保野公園（一時避難場所）", "city": "明保野町7-66 外", "Tel": "028-636-2121（文化会館）", "coordinates": "139.8682737:36.5459493", "longtitude": "139.8682737", "latitude": "36.5459493" }, "geometry": { "type": "Point", "coordinates": [ 139.8682737, 36.5459493 ] } },
+{ "type": "Feature", "properties": { "title": "陽南第1公園（一時避難場所）", "city": "大塚町1", "Tel": "028-663-1611（スポーツ振興財団）", "coordinates": "139.8627259:36.5352241", "longtitude": "139.8627259", "latitude": "36.5352241" }, "geometry": { "type": "Point", "coordinates": [ 139.862725899999987, 36.5352241 ] } },
+{ "type": "Feature", "properties": { "title": "宇都宮城址公園（一時避難場所）", "city": "本丸町、旭1丁目地内（市役所東側）", "Tel": "028-632-2529（市公園管理課）", "coordinates": "139.8851296:36.5352241", "longtitude": "139.8851296", "latitude": "36.5352241" }, "geometry": { "type": "Point", "coordinates": [ 139.8851296, 36.5352241 ] } }
 ]
 }
