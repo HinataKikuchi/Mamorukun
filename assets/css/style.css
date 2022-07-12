@@ -3,14 +3,24 @@ body {
    height: 100%;
 }
 
+.mynavi {
+   position:absolute;
+   top:0;
+   left:0;
+   width: 100%;
+   z-index: 10;
+   background: #ffffff;
+}
+
 #map {
    position: absolute;
-   top: 0;
+   top: 32px;
    left: 0;
    width: 100%;
    height: 100%;
    margin: 0;
    padding: 0;
+   z-index: 5;
 }
 
 .leaflet-popup-content-wrapper,
@@ -22,7 +32,7 @@ body {
 .leaflet-popup-content,
 a.leaflet-popup-close-button {
    color: orange;
-   font: bold 15pt monospace;
+   font: bold 16px monospace;
 }
 
 .leaflet-popup-content-wrapper {
@@ -49,7 +59,7 @@ a.leaflet-popup-close-button {
 
  .mapExplanation li{
    color: rgb(0, 157, 255);
-   font: bold 12pt monospace;
+   font: bold 14px monospace;
    margin-bottom: 8px;
    margin-top: 8px;
  }
