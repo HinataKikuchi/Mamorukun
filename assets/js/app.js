@@ -30,56 +30,57 @@ var wideEvacuationParkIcon = L.icon({
   popupAnchor:  [0, -50] // ポップアップが開く点の座標（iconAnchorが基準）
 });
 
-// leafletに追加するリストを定義
-let parkLocationList = [];
+//一時避難場所のデータについてfetch処理まで書いとく
+function getTmpParkLocation() {
+  const url = './data/geojson_data/tmp_park.geojson';
+  return fetch(url).then(response => response.json())
+}
+//広域避難場所のデータについてfetch処理まで書いとく
+function getWidthParkLocation() {
+  const url = './data/geojson_data/wide_park.geojson';
+  return fetch(url).then(response => response.json())
+}
 
-//一時避難所のデータ
-var tmpEvacuationParkUrl = './data/geojson_data/tmp_park.geojson';
-// jquery を使わずにデータ処理したい
-fetch(tmpEvacuationParkUrl)
-  .then(response => response.json())
-  // GeoJSONを地図に追加する
-  .then(data => {
-    parkLocationList.push(L.geoJSON(data,{
-       // カスタムアイコンを設定する
-      pointToLayer: function(feature, latlng) {
-        return L.marker(latlng, {icon: tmpEvacuationParkIcon});
+//定義された関数を呼び出すことでfetchをpromise.allがいっぺんに処理する
+Promise.all([getTmpParkLocation(), getWidthParkLocation()]).then(values => {
+  console.log(values);
+  // 呼び出した順に値が返ってくる
+  // 今回は [一時避難場所, 広域避難場所] の順
+  const [tmpParkLocationData, widthParkLocationData] = values;
+  // leafletに追加するリストを定義
+  const layerGroupList = [
+      //一時避難場所
+      L.geoJSON(tmpParkLocationData,{
+        // カスタムアイコンを設定する
+       pointToLayer: function(feature, latlng) {
+         return L.marker(latlng, {icon: tmpEvacuationParkIcon});
+       },
+       // ポップアップを表示する
+       onEachFeature: function (feature, layer) {
+         // 建物の名前を取り出す(改行<br>)
+         let name = feature.properties.title + '<br>';
+         // ポップアップに名前を表示する
+         layer.bindPopup(name);
+       }
+     }),
+
+      //広域避難場所
+      L.geoJSON(widthParkLocationData,{
+        // カスタムアイコンを設定する
+        pointToLayer: function(feature, latlng) {
+        return L.marker(latlng, {icon: wideEvacuationParkIcon});
       },
-      // ポップアップを表示する
-      onEachFeature: function (feature, layer) {
+        // ポップアップを表示する
+        onEachFeature: function(feature, layer){
         // 建物の名前を取り出す(改行<br>)
-        let name = feature.properties.title + '<br>';
+        let name = feature.properties.title+'<br>';
         // ポップアップに名前を表示する
         layer.bindPopup(name);
-      }
-    }));
-    console.log('could get tmp json',data);
-    
-    //広域避難所のデータ
-    var wideEvacuationParkUrl = './data/geojson_data/wide_park.geojson';
-    fetch(wideEvacuationParkUrl)
-      .then(response => response.json())
-      // GeoJSONを地図に追加する
-      .then(data => {
-        parkLocationList.push(L.geoJSON(data, {
-          // カスタムアイコンを設定する
-          pointToLayer: function(feature, latlng) {
-          return L.marker(latlng, {icon: wideEvacuationParkIcon});
-        },
-          // ポップアップを表示する
-          onEachFeature: function(feature, layer){
-          // 建物の名前を取り出す(改行<br>)
-          let name = feature.properties.title+'<br>';
-          // ポップアップに名前を表示する
-          layer.bindPopup(name);
-      }
-      }));
-        console.log('Could get wide json',L.geoJSON(data));
-        let group = L.layerGroup(parkLocationList);
-        console.log(group);
-        group.addTo(map);
-      });
-  });
-
-
-// L.geoJSON(data).addTo(map);
+    }
+    }),
+  ];
+  //maplayerにリストを追加
+  const layerGroup = L.layerGroup(layerGroupList);
+  //表示
+  layerGroup.addTo(map);
+})
