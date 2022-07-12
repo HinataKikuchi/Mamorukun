@@ -1,5 +1,5 @@
 let utsunomiyaLat = 36.558852; // JR宇都宮駅の緯度
-let utsunomiyaLng= 139.898126; // JR宇都宮駅の経度
+let utsunomiyaLng = 139.898126; // JR宇都宮駅の経度
 let zoom = 16; // ズームレベル
 
 let map = L.map("map"); // 地図の生成
@@ -17,17 +17,17 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 //一時避難所のアイコン追加
 var tmpEvacuationParkIcon = L.icon({
   iconUrl: './icon/tmporaly_evacuation_site.png', // アイコン画像のURL
-  iconSize:     [40, 40], // アイコンのサイズをピクセルで指定
-  iconAnchor:   [25, 50], // アイコンの先端の座標（右上からの相対座標）
-  popupAnchor:  [0, -50] // ポップアップが開く点の座標（iconAnchorが基準）
+  iconSize: [40, 40], // アイコンのサイズをピクセルで指定
+  iconAnchor: [25, 50], // アイコンの先端の座標（右上からの相対座標）
+  popupAnchor: [0, -50] // ポップアップが開く点の座標（iconAnchorが基準）
 });
 
 //広域避難場所のアイコン追加
 var wideEvacuationParkIcon = L.icon({
   iconUrl: './icon/wide_area_evacuation_site.png', // アイコン画像のURL
-  iconSize:     [40, 40], // アイコンのサイズをピクセルで指定
-  iconAnchor:   [25, 50], // アイコンの先端の座標（右上からの相対座標）
-  popupAnchor:  [0, -50] // ポップアップが開く点の座標（iconAnchorが基準）
+  iconSize: [40, 40], // アイコンのサイズをピクセルで指定
+  iconAnchor: [25, 50], // アイコンの先端の座標（右上からの相対座標）
+  popupAnchor: [0, -50] // ポップアップが開く点の座標（iconAnchorが基準）
 });
 
 //一時避難場所のデータについてfetch処理まで書いとく
@@ -41,6 +41,11 @@ function getWidthParkLocation() {
   return fetch(url).then(response => response.json())
 }
 
+/*ここでpopupのスタイルを整形して表示したい*/
+function generatePopUpMessage(title, facility, imgURL) {
+
+}
+
 //定義された関数を呼び出すことでfetchをpromise.allがいっぺんに処理する
 Promise.all([getTmpParkLocation(), getWidthParkLocation()]).then(values => {
   console.log(values);
@@ -49,34 +54,34 @@ Promise.all([getTmpParkLocation(), getWidthParkLocation()]).then(values => {
   const [tmpParkLocationData, widthParkLocationData] = values;
   // leafletに追加するリストを定義
   const layerGroupList = [
-      //一時避難場所
-      L.geoJSON(tmpParkLocationData,{
-        // カスタムアイコンを設定する
-       pointToLayer: function(feature, latlng) {
-         return L.marker(latlng, {icon: tmpEvacuationParkIcon});
-       },
-       // ポップアップを表示する
-       onEachFeature: function (feature, layer) {
-         // 建物の名前を取り出す(改行<br>)
-         let name = feature.properties.title + '<br>';
-         // ポップアップに名前を表示する
-         layer.bindPopup(name);
-       }
-     }),
-
-      //広域避難場所
-      L.geoJSON(widthParkLocationData,{
-        // カスタムアイコンを設定する
-        pointToLayer: function(feature, latlng) {
-        return L.marker(latlng, {icon: wideEvacuationParkIcon});
+    //一時避難場所
+    L.geoJSON(tmpParkLocationData, {
+      // カスタムアイコンを設定する
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, { icon: tmpEvacuationParkIcon });
       },
-        // ポップアップを表示する
-        onEachFeature: function(feature, layer){
+      // ポップアップを表示する
+      onEachFeature: function (feature, layer) {
         // 建物の名前を取り出す(改行<br>)
-        let name = feature.properties.title+'<br>';
+        let name = feature.properties.title + '<br>';
         // ポップアップに名前を表示する
         layer.bindPopup(name);
-    }
+      }
+    }),
+
+    //広域避難場所
+    L.geoJSON(widthParkLocationData, {
+      // カスタムアイコンを設定する
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, { icon: wideEvacuationParkIcon });
+      },
+      // ポップアップを表示する
+      onEachFeature: function (feature, layer) {
+        // 建物の名前を取り出す(改行<br>)
+        let name = feature.properties.title + '<br>';
+        // ポップアップに名前を表示する
+        layer.bindPopup(name);
+      }
     }),
   ];
   //maplayerにリストを追加
