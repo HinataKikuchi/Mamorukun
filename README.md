@@ -39,7 +39,7 @@ https://opensource.org/licenses/mit-license.php
 - 石塚 駿(リーダー兼説明監修)
 - 齋藤 響(防災公園の説明監修)
 - 高橋 駿平(取材調整・マネジメント)
-- 鈴 木潤季(ロゴ作成)
+- 鈴木 潤季(ロゴ作成)
 - 小笠原 大貴(ロゴ作成)
 - HinataKikuchi(開発)
 
