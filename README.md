@@ -36,9 +36,11 @@ https://opensource.org/licenses/mit-license.php
 
 現在公開許諾確認済みのメンバーのみ掲載しています
 
-- Saitou(防災公園の説明監修)
-- Suzuki(ロゴ作成)
-- Ogasawara(ロゴ作成)
+- 石塚 駿(リーダー兼説明監修)
+- 齋藤 響(防災公園の説明監修)
+- 高橋 駿平(取材調整・マネジメント)
+- 鈴 木潤季(ロゴ作成)
+- 小笠原 大貴(ロゴ作成)
 - HinataKikuchi(開発)
 
 # 連絡方法
