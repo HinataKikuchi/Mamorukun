@@ -10,23 +10,35 @@
 今後は、公園以外の防災施設に関しても同様の施設情報の掲載を行こなったり、スマホアプリとしての開発を行ったりすることを考えている。
 
 ## 使用データ
-この「**まもるくん**」は以下の著作物を改変して利用しています。 「指定緊急避難場所一覧（推奨データセット準拠）」、宇都宮市、クリエイティブ・コモンズ・ライセンス表示2.1 http://creativecommons.org/licenses/by/2.1/jp/
+この「**まもるくん**」は以下の著作物を改変して利用しています。
+
+- 「指定緊急避難場所一覧（推奨データセット準拠）」、宇都宮市、クリエイティブ・コモンズ・ライセンス表示2.1 http://creativecommons.org/licenses/by/2.1/jp/
 
 * 広域避難場所(公園のみ)
 * 一次避難場所(公園のみ)
+
 ## 使用アイコン
 
 * 広域避難場所/一時避難場所 アイコン作成者 : 鈴木 潤季, 小笠原 大貴
 
 このアイコンはMITライセンスの元に公開されています
 ```md
-Copyright (c) 2020 Suzuki Mitsuki, Ogasawara Hiroki
+Copyright (c) 2022 Suzuki Mitsuki, Ogasawara Hiroki
 Released under the MIT license
 https://opensource.org/licenses/mit-license.php
 ```
 ## 使用ライブラリ
 * Map: Leaflet, MapBox
 * UI: Bootstrap
+* Data: geopandas
+
+## チームメンバ-
+
+現在公開許諾確認済みのメンバーのみ掲載しています
+
+- Suzuki(ロゴ作成)
+- Ogasawara(ロゴ作成)
+- HinataKikuchi(開発)
 
 # 連絡方法
 
