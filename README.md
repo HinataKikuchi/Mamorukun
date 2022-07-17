@@ -36,6 +36,7 @@ https://opensource.org/licenses/mit-license.php
 
 現在公開許諾確認済みのメンバーのみ掲載しています
 
+- Saitou(防災公園の説明監修)
 - Suzuki(ロゴ作成)
 - Ogasawara(ロゴ作成)
 - HinataKikuchi(開発)
