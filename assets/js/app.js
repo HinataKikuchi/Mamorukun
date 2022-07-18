@@ -1,6 +1,6 @@
 let utsunomiyaLat = 36.558852; // JR宇都宮駅の緯度
 let utsunomiyaLng = 139.898126; // JR宇都宮駅の経度
-let zoom = 16; // ズームレベル
+let zoom = 14; // ズームレベル
 
 let map = L.map("map"); // 地図の生成
 map.setView([utsunomiyaLat, utsunomiyaLng], zoom); // 緯度経度、ズームレベルを設定する
@@ -41,12 +41,12 @@ function getWidthParkLocation() {
   return fetch(url).then(response => response.json())
 }
 
-const facilityList=['防災トイレ','ソーラー発電の公園灯','揚水ポンプ','防火水槽','応急給水槽','ヘリコプター臨時離着陸場','かまどベンチ','防災あずまや','防災備蓄庫'];
+const facilityList = ['防災トイレ', 'ソーラー発電の公園灯', '揚水ポンプ', '防火水槽', '応急給水槽', 'ヘリコプター臨時離着陸場', 'かまどベンチ', '防災あずまや', '防災備蓄庫'];
 
 /*ここでpopupのスタイルを整形して表示したい*/
 function generatePopUpMessage(feature) {
 
-  var message ='';
+  var message = '';
   message += `<img src="${feature.properties.image_url}" class="leaflet-popup-thumbnail"/>`
   message += '<ol class="mapExplanation"><li>名称</li>' + feature.properties.title;
   message += '<li>住所</li>' + '栃木県宇都宮市' + feature.properties.city;
