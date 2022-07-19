@@ -1,0 +1,6 @@
+,名称,住所,電話番号,座標,防災トイレ,ソーラー発電の公園灯,揚水ポンプ,防火水槽,応急給水槽,ヘリコプター臨時離着陸場,かまどベンチ,防災あずまや,防災備蓄庫,image_url
+1,ブレックスアリーナ宇都宮〔市体育館〕・駅東公園（広域避難場所）,元今泉5丁目6-18　他,028-663-1611（スポーツ振興財団）,139.9092542:36.5605916,false,false,true,true,true,false,false,false,true,img/wide_park/ekihigashi.jpg
+3,八幡山公園（広域避難場所）,塙田５丁目2-70,028-632-2529（市公園管理課）,139.8860899:36.5710841,true,true,false,true,false,false,true,true,false,img/wide_park/hachiman.jpg
+4,平出工業団地公園（広域避難場所）,平出工業団地30-1,028-662-5813（緑の相談所）,139.9357288:36.5703225,false,false,false,false,false,false,false,true,true,img/wide_park/hiraide.jpg
+6,宮原運動公園（広域避難場所）,陽南４丁目5-6,028-658-1052,139.8684861:36.5381157,true,false,false,true,true,false,true,true,true,img/wide_park/miyahara.jpg
+7,栃木県中央公園（広域避難場所）,睦町2-50,028-636-1491（公園管理事務所）,139.8627259:36.5585350,false,true,false,false,true,false,true,false,true,img/wide_park/park_img.png
